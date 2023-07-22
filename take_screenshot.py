@@ -17,6 +17,7 @@ while True:
     img = cv2.flip(img, 1)
     h,w,c = img.shape
     results = hands.process(img)
+    image = pyautogui.screenshot()
 
     if results.multi_hand_landmarks:
         for hand_landmark in results.multi_hand_landmarks:
